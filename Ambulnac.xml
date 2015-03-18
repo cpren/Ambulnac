@@ -2,33 +2,33 @@
   <block type="comment_comment" id="6" x="6" y="-22">
     <field name="TEXT">Blinking Lights</field>
     <next>
-      <block type="controls_whileUntil" id="7" inline="false">
-        <field name="MODE">WHILE</field>
-        <value name="NUMBER">
-          <block type="logic_compare" id="8" inline="true">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="math_number" id="9">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="10">
-                <field name="NUM">1</field>
-              </block>
-            </value>
+      <block type="variables_set" id="11" inline="true">
+        <field name="VAR">Light</field>
+        <value name="VALUE">
+          <block type="math_number" id="12">
+            <field name="NUM">1</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="movement_forward" id="34">
-            <next>
-              <block type="variables_set" id="11" inline="true">
-                <field name="VAR">Light</field>
-                <value name="VALUE">
-                  <block type="math_number" id="12">
+        <next>
+          <block type="controls_whileUntil" id="7" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="8" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_number" id="9">
                     <field name="NUM">1</field>
                   </block>
                 </value>
+                <value name="B">
+                  <block type="math_number" id="10">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_forward" id="34">
                 <next>
                   <block type="controls_whileUntil" id="13" inline="false">
                     <field name="MODE">WHILE</field>
@@ -148,9 +148,9 @@
                   </block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
