@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="comment_comment" id="1" x="6" y="-31">
+  <block type="comment_comment" id="1" x="369" y="-2">
     <field name="TEXT">Blinking Lights</field>
     <next>
       <block type="controls_whileUntil" id="2" inline="false">
