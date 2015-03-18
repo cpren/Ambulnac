@@ -89,7 +89,7 @@
                     <field name="VOLUME">HIGH</field>
                     <next>
                       <block type="multimedia_playwav" id="72">
-                        <field name="WAV">SOUND.wav</field>
+                        <field name="WAV"></field>
                       </block>
                     </next>
                   </block>
