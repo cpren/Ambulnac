@@ -84,6 +84,16 @@
                     </next>
                   </block>
                 </statement>
+                <next>
+                  <block type="multimedia_volume" id="65">
+                    <field name="VOLUME">HIGH</field>
+                    <next>
+                      <block type="multimedia_playwav" id="72">
+                        <field name="WAV">SOUND</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
