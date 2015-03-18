@@ -88,8 +88,10 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="movement_forward" id="29"></block>
+        </next>
       </block>
     </next>
   </block>
-  <block type="movement_forward" id="29" x="5" y="325"></block>
 </xml>
