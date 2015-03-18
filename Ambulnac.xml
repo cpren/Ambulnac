@@ -74,16 +74,6 @@
                     </next>
                   </block>
                 </statement>
-                <next>
-                  <block type="multimedia_volume" id="18">
-                    <field name="VOLUME">HIGH</field>
-                    <next>
-                      <block type="multimedia_playwav" id="19">
-                        <field name="WAV"></field>
-                      </block>
-                    </next>
-                  </block>
-                </next>
               </block>
             </next>
           </block>
