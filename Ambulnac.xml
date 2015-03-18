@@ -2,8 +2,9 @@
   <block type="comment_comment" id="1" x="-19" y="-10">
     <field name="TEXT">Blinking Lights</field>
     <next>
-      <block type="controls_if" id="2" inline="false">
-        <value name="IF0">
+      <block type="controls_whileUntil" id="44" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
           <block type="logic_compare" id="3" inline="true">
             <field name="OP">EQ</field>
             <value name="A">
@@ -18,7 +19,7 @@
             </value>
           </block>
         </value>
-        <statement name="DO0">
+        <statement name="DO">
           <block type="variables_set" id="6" inline="true">
             <field name="VAR">Light</field>
             <value name="VALUE">
