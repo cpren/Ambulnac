@@ -1,1 +1,94 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="2" x="-19" y="-10">
+    <field name="TEXT">Blinking Lights</field>
+    <next>
+      <block type="controls_if" id="119" inline="false">
+        <value name="IF0">
+          <block type="logic_compare" id="187" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_number" id="194">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="201">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="variables_set" id="60" inline="true">
+            <field name="VAR">Light Number</field>
+            <value name="VALUE">
+              <block type="math_number" id="80">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="58" inline="false">
+                <field name="MODE">WHILE</field>
+                <value name="NUMBER">
+                  <block type="logic_compare" id="153" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="157">
+                        <field name="VAR">Light Number</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="164">
+                        <field name="NUM">7</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="led_select" id="11" inline="true">
+                    <field name="ACTION">ON</field>
+                    <value name="LED">
+                      <block type="variables_get" id="112">
+                        <field name="VAR">Light Number</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="64" inline="true">
+                        <field name="VAR">Light Number</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="91" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="95">
+                                <field name="VAR">Light Number</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="108">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="multimedia_volume" id="215">
+                    <field name="VOLUME">HIGH</field>
+                    <next>
+                      <block type="multimedia_playwav" id="208">
+                        <field name="WAV"></field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
