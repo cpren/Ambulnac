@@ -1,4 +1,20 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_callnoreturn" id="124" x="-3" y="-16">
+    <mutation name="Blink"></mutation>
+    <next>
+      <block type="movement_forward" id="45">
+        <next>
+          <block type="robot_delay" id="47" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="54">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
   <block type="procedures_defnoreturn" id="33" x="197" y="-26">
     <mutation></mutation>
     <field name="NAME">Blink</field>
@@ -96,21 +112,5 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="movement_forward" id="45" x="-1" y="33">
-    <next>
-      <block type="robot_delay" id="47" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="54">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
-        <next>
-          <block type="procedures_callnoreturn" id="124">
-            <mutation name="Blink"></mutation>
-          </block>
-        </next>
-      </block>
-    </next>
   </block>
 </xml>
