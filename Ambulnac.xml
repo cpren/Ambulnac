@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="procedures_defnoreturn" id="33" x="330" y="-43">
+  <block type="procedures_defnoreturn" id="33" x="197" y="-26">
     <mutation></mutation>
     <field name="NAME">Blink</field>
     <statement name="STACK">
@@ -97,17 +97,17 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_callnoreturn" id="124" x="0" y="-10">
-    <mutation name="Blink"></mutation>
+  <block type="movement_forward" id="45" x="-1" y="33">
     <next>
-      <block type="movement_forward" id="45">
+      <block type="robot_delay" id="47" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="54">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
         <next>
-          <block type="robot_delay" id="47" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="54">
-                <field name="NUM">1000</field>
-              </block>
-            </value>
+          <block type="procedures_callnoreturn" id="124">
+            <mutation name="Blink"></mutation>
           </block>
         </next>
       </block>
