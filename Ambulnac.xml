@@ -2,33 +2,33 @@
   <block type="comment_comment" id="6" x="6" y="-22">
     <field name="TEXT">Blinking Lights</field>
     <next>
-      <block type="variables_set" id="11" inline="true">
-        <field name="VAR">Light</field>
-        <value name="VALUE">
-          <block type="math_number" id="12">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <next>
-          <block type="controls_whileUntil" id="7" inline="false">
-            <field name="MODE">WHILE</field>
-            <value name="NUMBER">
-              <block type="logic_compare" id="8" inline="true">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="math_number" id="9">
-                    <field name="NUM">1</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="10">
-                    <field name="NUM">1</field>
-                  </block>
-                </value>
+      <block type="controls_whileUntil" id="7" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="8" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_number" id="9">
+                <field name="NUM">1</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="movement_forward" id="34">
+            <value name="B">
+              <block type="math_number" id="10">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="34">
+            <next>
+              <block type="variables_set" id="11" inline="true">
+                <field name="VAR">Light</field>
+                <value name="VALUE">
+                  <block type="math_number" id="12">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
                 <next>
                   <block type="controls_whileUntil" id="13" inline="false">
                     <field name="MODE">WHILE</field>
@@ -87,70 +87,80 @@
                       </block>
                     </statement>
                     <next>
-                      <block type="controls_whileUntil" id="50" inline="false">
-                        <field name="MODE">WHILE</field>
-                        <value name="NUMBER">
-                          <block type="logic_compare" id="51" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="52">
-                                <field name="VAR">Light</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="53">
-                                <field name="NUM">6</field>
-                              </block>
-                            </value>
+                      <block type="variables_set" id="62" inline="true">
+                        <field name="VAR">Light</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="63">
+                            <field name="NUM">1</field>
                           </block>
                         </value>
-                        <statement name="DO">
-                          <block type="led_select" id="54" inline="true">
-                            <field name="ACTION">FLASH</field>
-                            <value name="LED">
-                              <block type="variables_get" id="55">
-                                <field name="VAR">Light</field>
+                        <next>
+                          <block type="controls_whileUntil" id="50" inline="false">
+                            <field name="MODE">WHILE</field>
+                            <value name="NUMBER">
+                              <block type="logic_compare" id="51" inline="true">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="52">
+                                    <field name="VAR">Light</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="53">
+                                    <field name="NUM">6</field>
+                                  </block>
+                                </value>
                               </block>
                             </value>
-                            <next>
-                              <block type="robot_delay" id="56" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="57">
-                                    <field name="NUM">1000</field>
+                            <statement name="DO">
+                              <block type="led_select" id="54" inline="true">
+                                <field name="ACTION">FLASH</field>
+                                <value name="LED">
+                                  <block type="variables_get" id="55">
+                                    <field name="VAR">Light</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="variables_set" id="58" inline="true">
-                                    <field name="VAR">Light</field>
-                                    <value name="VALUE">
-                                      <block type="math_arithmetic" id="59" inline="true">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <block type="variables_get" id="60">
-                                            <field name="VAR">Light</field>
-                                          </block>
-                                        </value>
-                                        <value name="B">
-                                          <block type="math_number" id="61">
-                                            <field name="NUM">1</field>
+                                  <block type="robot_delay" id="56" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="57">
+                                        <field name="NUM">1000</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="58" inline="true">
+                                        <field name="VAR">Light</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="59" inline="true">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="60">
+                                                <field name="VAR">Light</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="61">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
                                       </block>
-                                    </value>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
-                            </next>
+                            </statement>
                           </block>
-                        </statement>
+                        </next>
                       </block>
                     </next>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
-        </next>
+        </statement>
       </block>
     </next>
   </block>
