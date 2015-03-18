@@ -88,7 +88,7 @@
                     </statement>
                     <next>
                       <block type="multimedia_playwav" id="49">
-                        <field name="WAV">audtst07</field>
+                        <field name="WAV">audtst07.wav</field>
                       </block>
                     </next>
                   </block>
